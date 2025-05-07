@@ -1,0 +1,42 @@
+# Define a menu with items and their prices using a dictionary
+menu = {"Burger": 5.0, "Pizza": 8.0, "Salad": 4.5}
+order = []  # List to store items ordered by the customer
+
+# Function to display the menu
+def show_menu():
+    print("Menu:")
+    for item, price in menu.items():
+        print(f"{item}: ${price}")
+
+# Function to add item to the order
+def add_to_order(item):
+    if item in menu:
+        order.append(item)
+        print(f"Added {item}")
+    else:
+        print("Item not available.")
+
+# Function to display current order and total cost
+def show_order():
+    print("Your Order:")
+    total = 0
+    for item in order:
+        print(f"- {item}: ${menu[item]}")
+        total += menu[item]
+    print(f"Total: ${total}")
+
+# Main loop to interact with the user
+while True:
+    print("\n1. Show Menu\n2. Add to Order\n3. Show Order\n4. Exit")
+    choice = input("Choose: ")
+
+    if choice == '1':
+        show_menu()
+    elif choice == '2':
+        add_to_order(input("Item name: "))
+    elif choice == '3':
+        show_order()
+    elif choice == '4':
+        break
+    else:
+        print("Invalid option.")
