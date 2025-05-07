@@ -1,0 +1,42 @@
+# Store the user's budget and a history of transactions
+balance = 0
+history = []
+
+# Function to add income
+def add_income(amount):
+    global balance
+    balance += amount
+    history.append(f"Income: +{amount}")  # Save this in the history
+
+# Function to add an expense
+def add_expense(amount):
+    global balance
+    balance -= amount
+    history.append(f"Expense: -{amount}")  # Save this in the history
+
+# Function to show the current balance
+def show_balance():
+    print(f"Balance: {balance}")
+
+# Function to show all transactions
+def show_history():
+    for item in history:
+        print(item)
+
+# Menu system to let user choose what to do
+while True:
+    print("\n1. Add Income\n2. Add Expense\n3. Show Balance\n4. Show History\n5. Exit")
+    choice = input("Choose: ")
+
+    if choice == '1':
+        add_income(float(input("Amount: ")))  # Convert user input to float
+    elif choice == '2':
+        add_expense(float(input("Amount: ")))
+    elif choice == '3':
+        show_balance()
+    elif choice == '4':
+        show_history()
+    elif choice == '5':
+        break
+    else:
+        print("Invalid choice.")
