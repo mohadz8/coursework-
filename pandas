@@ -1,0 +1,25 @@
+# Import the pandas library for data handling
+import pandas as pd
+
+# Create sample data using a dictionary
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie'],   # List of names
+    'Age': [24, 30, 22],                   # Corresponding ages
+    'City': ['London', 'Paris', 'Berlin']  # Corresponding cities
+}
+
+# Create a DataFrame (like a table) from the dictionary
+df = pd.DataFrame(data)
+
+# Print the full table
+print("Full DataFrame:")
+print(df)
+
+# Show statistical summary of numeric columns (e.g. Age)
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Filter and display people whose age is greater than 23
+print("\nPeople older than 23:")
+filtered_df = df[df['Age'] > 23]
+print(filtered_df)
