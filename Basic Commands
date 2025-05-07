@@ -1,18 +1,122 @@
-# Display a welcome message to the user
-print("Welcome to Python!")
+# Task 1: Assigning Values to Variables
+integer_var = 10  # Storing an integer
+float_var = 3.14  # Storing a floating-point number
+string_var = "Hello"  # Storing a string
+print(integer_var, float_var, string_var)  # Printing all variables separated by commas
 
-# Ask the user for their name and store it in the variable 'name'
-name = input("Enter your name: ")
+# Task 2: Data Types
+age = 25  # Assign an integer to age
+print(type(age))  # Print the data type of age (int)
 
-# Display a personalized greeting using the name provided
-print(f"Hello, {name}!")
+age = 25.0  # Change age to a float
+print(type(age))  # Print the new data type (float)
 
-# Define two numbers and store them in variables
-x = 5
-y = 3
+is_student = True  # Boolean variable representing student status
+print(type(is_student))  # Print the data type of is_student (bool)
 
-# Perform and display basic math operations
-print("Sum:", x + y)         # Adds x and y
-print("Difference:", x - y)  # Subtracts y from x
-print("Product:", x * y)     # Multiplies x and y
-print("Quotient:", x / y)    # Divides x by y
+# Task 3: Basic Input and Output
+name = input("What is your name? ")  # Ask user for their name
+print("Hello,", name + "!")  # Greet the user using their input
+
+age = int(input("What is your age? "))  # Ask user for age and convert to integer
+if age >= 18:  # Check if age is 18 or older
+    print("You are eligible to vote.")  # Print eligible message
+else:
+    print("You are not eligible to vote.")  # Print not eligible message
+
+# Task 4: Converting Data Types
+number_str = input("Enter a number: ")  # Ask user for a number (as a string)
+number_int = int(number_str)  # Convert the string to an integer
+print("Squared value:", number_int ** 2)  # Print the square of the number
+
+float_str = "4.56"  # String representing a floating-point number
+float_num = float(float_str)  # Convert the string to a float
+print("Multiplied by 2:", float_num * 2)  # Multiply by 2 and print the result
+
+# Task 5: Arithmetic Operators
+print("45 + 67 =", 45 + 67)  # Addition
+print("156 - 89 =", 156 - 89)  # Subtraction
+print("12 * 7 =", 12 * 7)  # Multiplication
+print("100 / 4 =", 100 / 4)  # Division
+print("10 % 3 =", 10 % 3)  # Remainder (modulus)
+print("3 ** 4 =", 3 ** 4)  # Exponentiation (3 to the power of 4)
+
+# Task 6: Comparison Operators
+a = 10  # First number
+b = 20  # Second number
+
+print("a == b:", a == b)  # Check if a equals b
+print("a != b:", a != b)  # Check if a is not equal to b
+print("a < b:", a < b)  # Check if a is less than b
+print("a > b:", a > b)  # Check if a is greater than b
+print("a <= b:", a <= b)  # Check if a is less than or equal to b
+print("a >= b:", a >= b)  # Check if a is greater than or equal to b
+
+x = int(input("Enter the first number: "))  # Get first number from user
+y = int(input("Enter the second number: "))  # Get second number from user
+
+# Compare the two numbers and print result
+if x >= y:
+    print("First number is greater than or equal to the second.")
+else:
+    print("First number is less than the second.")
+
+# Task 7: Logical Operators
+num = int(input("Enter a number: "))  # Get a number from the user
+# Check if it's greater than 10 AND less than 20
+if num > 10 and num < 20:
+    print("The number is between 10 and 20.")
+else:
+    print("The number is NOT between 10 and 20.")
+
+num = int(input("Enter another number: "))  # Get another number
+# Check if it's less than 5 OR greater than 50
+if num < 5 or num > 50:
+    print("The number is either less than 5 or greater than 50.")
+else:
+    print("The number is between 5 and 50.")
+
+# Task 8: Conditional Statements
+age = int(input("Enter your age: "))  # Ask user for age
+# Check if the user is an adult
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+
+number = int(input("Enter a number: "))  # Ask user for a number
+
+# FizzBuzz conditions:
+if number % 3 == 0 and number % 5 == 0:
+    print("FizzBuzz")  # Divisible by both 3 and 5
+elif number % 3 == 0:
+    print("Fizz")  # Divisible only by 3
+elif number % 5 == 0:
+    print("Buzz")  # Divisible only by 5
+else:
+    print(number)  # Not divisible by 3 or 5
+
+# Task 9: Loops
+# For loop to print numbers from 1 to 10
+for i in range(1, 11):
+    print(i)
+
+# While loop to print even numbers from 2 to 20
+i = 2
+while i <= 20:
+    print(i)
+    i += 2  # Increase by 2 each time to get even numbers
+
+# Ask user for a number and print numbers divisible by 4 up to that number
+n = int(input("Enter a number: "))
+for i in range(1, n + 1):
+    if i % 4 == 0:
+        print(i)
+
+# Bonus Task: Nested Loops - Triangle Pattern
+# Outer loop controls the number of lines (1 to 5)
+for i in range(1, 6):
+    # Inner loop prints stars on each line
+    for j in range(i):
+        print("*", end="")  # Print star without newline
+    print()  # Move to the next line
