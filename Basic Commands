@@ -1,0 +1,18 @@
+# Display a welcome message to the user
+print("Welcome to Python!")
+
+# Ask the user for their name and store it in the variable 'name'
+name = input("Enter your name: ")
+
+# Display a personalized greeting using the name provided
+print(f"Hello, {name}!")
+
+# Define two numbers and store them in variables
+x = 5
+y = 3
+
+# Perform and display basic math operations
+print("Sum:", x + y)         # Adds x and y
+print("Difference:", x - y)  # Subtracts y from x
+print("Product:", x * y)     # Multiplies x and y
+print("Quotient:", x / y)    # Divides x by y
