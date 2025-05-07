@@ -1,0 +1,37 @@
+# This variable stores the current balance of the account
+balance = 0
+
+# Function to add money to the balance
+def deposit(amount):
+    global balance  # Tells Python we're using the global 'balance' variable
+    balance += amount
+    print(f"Deposited: {amount}, New Balance: {balance}")
+
+# Function to withdraw money if there are sufficient funds
+def withdraw(amount):
+    global balance
+    if amount <= balance:
+        balance -= amount
+        print(f"Withdrew: {amount}, New Balance: {balance}")
+    else:
+        print("Insufficient funds!")
+
+# Function to show the current balance
+def show_balance():
+    print(f"Current Balance: {balance}")
+
+# Loop to display the menu and respond to user choices
+while True:
+    print("\n1. Deposit\n2. Withdraw\n3. Balance\n4. Exit")
+    choice = input("Choose an option: ")
+
+    if choice == '1':
+        deposit(float(input("Amount to deposit: ")))  # Ask for amount and deposit it
+    elif choice == '2':
+        withdraw(float(input("Amount to withdraw: ")))  # Ask for amount and try to withdraw it
+    elif choice == '3':
+        show_balance()  # Show the balance
+    elif choice == '4':
+        break  # Exit the loop
+    else:
+        print("Invalid choice!")
